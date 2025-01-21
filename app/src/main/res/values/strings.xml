@@ -1,3 +1,6 @@
 <resources>
     <string name="app_name">My keyboard</string>
+    <string name="suggested_3">Suggested 3</string>
+    <string name="suggested_2">Suggested 2</string>
+    <string name="suggested_1">Suggested 1</string>
 </resources>
