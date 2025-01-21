@@ -2,13 +2,15 @@ package com.example.mykeyboard
 
 import android.content.Context
 import android.view.LayoutInflater
+//import android.os.Vibrator
+//import android.os.VibrationEffect
 import android.widget.Button
 import android.widget.LinearLayout
 
 class KeyboardView(context: Context) : LinearLayout(context) {
     private var keyListener: ((String) -> Unit)? = null
     private var isUpperCase: Boolean = false  // To track if the keyboard is in uppercase mode
-
+//    private var vibrator: Vibrator = context.getSystemService(Context.VIBRATOR_SERVICE) as Vibrator
     // Store original text for keys
     private val originalKeyTexts = mutableMapOf<Int, String>()
 
@@ -25,12 +27,12 @@ class KeyboardView(context: Context) : LinearLayout(context) {
             R.id.key_n to "n", R.id.key_m to "m",
             R.id.key_space to " ", R.id.key_delete to "DELETE", R.id.key_enter to "\n"
         )
-
         // Set click listeners for all keys
         keys.forEach { (id, key) ->
             val button = findViewById<Button>(id)
             button?.setOnClickListener {
                 keyListener?.invoke(getKeyText(key))
+//                vibrateKeyPress()
             }
             originalKeyTexts[id] = key  // Store original lowercase key text
         }
@@ -39,6 +41,7 @@ class KeyboardView(context: Context) : LinearLayout(context) {
         val toggleCaseButton = findViewById<Button>(R.id.key_toggle_case)
         toggleCaseButton?.setOnClickListener {
             toggleCase()
+//            vibrateKeyPress()
         }
     }
 
@@ -90,4 +93,11 @@ class KeyboardView(context: Context) : LinearLayout(context) {
         val customHeightMeasureSpec = MeasureSpec.makeMeasureSpec(desiredHeight, MeasureSpec.EXACTLY)
         super.onMeasure(widthMeasureSpec, customHeightMeasureSpec)
     }
+//    private fun vibrateKeyPress(){
+//        if(android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.O){
+//            vibrator.vibrate(VibrationEffect.createOneShot(30,VibrationEffect.DEFAULT_AMPLITUDE))
+//        }else{
+//            vibrator.vibrate(30)
+//        }
+//    }
 }

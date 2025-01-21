@@ -90,7 +90,7 @@
         android:orientation="horizontal"
         android:layout_marginBottom="12dp">
         <!-- Toggle Uppercase/Lowercase Button -->
-        <Button android:id="@+id/key_toggle_case" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="A" android:textColor="#FFFFFF" android:background="#424242" android:layout_marginEnd="13dp" android:padding="8dp"/>
+        <Button android:id="@+id/key_toggle_case" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="" android:textColor="#FFFFFF" android:background="#424242" android:layout_marginEnd="13dp" android:paddingVertical="8dp" android:drawableRight="@drawable/keyboard_capslock_24" android:paddingRight="6dp"/>
         <Button android:id="@+id/key_z" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="Z" android:textColor="#FFFFFF" android:background="#424242" android:layout_marginEnd="6dp" android:padding="8dp"/>
         <Button android:id="@+id/key_x" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="X" android:textColor="#FFFFFF" android:background="#424242" android:layout_marginEnd="6dp" android:padding="8dp"/>
         <Button android:id="@+id/key_c" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="C" android:textColor="#FFFFFF" android:background="#424242" android:layout_marginEnd="6dp" android:padding="8dp"/>
@@ -98,7 +98,7 @@
         <Button android:id="@+id/key_b" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="B" android:textColor="#FFFFFF" android:background="#424242" android:layout_marginEnd="6dp" android:padding="8dp"/>
         <Button android:id="@+id/key_n" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="N" android:textColor="#FFFFFF" android:background="#424242" android:layout_marginEnd="6dp" android:padding="8dp"/>
         <Button android:id="@+id/key_m" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="M" android:textColor="#FFFFFF" android:background="#424242" android:layout_marginEnd="6dp" android:padding="8dp"/>
-        <Button android:id="@+id/key_delete" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1.5" android:text="Del" android:textColor="#FFFFFF" android:background="#424242" android:layout_marginStart="8dp" android:paddingVertical="8dp"/>
+        <Button android:id="@+id/key_delete" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1.5" android:text="" android:textColor="#FFFFFF" android:background="#424242" android:layout_marginStart="8dp" android:paddingVertical="8dp" android:drawableRight="@drawable/backspace" android:paddingRight="13dp"/>
 
 
     </LinearLayout>
@@ -109,8 +109,8 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:layout_marginBottom="8dp">
-        <Button android:id="@+id/key_space" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="4" android:text="Space" android:textColor="#FFFFFF" android:background="#424242" android:layout_marginEnd="4dp" android:layout_marginStart="50dp"/>
-        <Button android:id="@+id/key_enter" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="Enter" android:textColor="#FFFFFF" android:background="#424242" android:layout_marginStart="50dp"/>
+        <Button android:id="@+id/key_space" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="4" android:text="Space" android:textColor="#FFFFFF" android:background="#424242" android:layout_marginEnd="4dp" android:layout_marginStart="70dp"/>
+        <Button android:id="@+id/key_enter" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="Enter" android:textColor="#FFFFFF" android:background="#424242" android:layout_marginStart="13dp"/>
     </LinearLayout>
 
 </LinearLayout>
